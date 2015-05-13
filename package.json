@@ -1,0 +1,16 @@
+{
+  "name": "Proj1",
+  "version": "0.0.1",
+  "description": "Content management framework Raving",
+  "scripts": {},
+  "author": "SERP team",
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "raving.core": "git+ssh://git@gitlab.com:serpteam/raving.core.git"
+  },
+  "jshintConfig": {
+    "undef": true,
+    "unused": true,
+    "predef": [ "module", "$", "angular" ]
+  }
+}

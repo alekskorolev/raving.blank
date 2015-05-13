@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="" ng-app="raving">
+
+<head header-ctrl>
+	<meta charset="UTF-8">
+	<title ng-bind="head.title">Строй портал</title>
+	<meta name="Author" content="" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="main" ng-class="root_class">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+						<a class="navbar-brand" href="#">Raving</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Ссылка</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Действие</a></li>
+									<li><a href="#">Другое действие</a></li>
+									<li><a href="#">Что-то еще</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Отдельная ссылка</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Еще одна отдельная ссылка</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-left" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Искать">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</div>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</div>
+				<auth-snippet sn-login-popup='modal:open:auth-login-modal'
+											sn-register-popup='modal:open:auth-register-modal'
+											sn-recovery-popup='modal:open:auth-recovery-modal'
+											sn-close-popups='modal:closeAll'
+											class="col-md-2">
+
+				</auth-snippet>
+			</div>
+		</div>
+	</nav>
+	<header class="container"> <!-- шапка меню-->
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+					</div>
+					<div class="col-md-4">Еще одна колонка</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-2">1
+							</div>
+							<div class="col-md-2">2
+							</div>
+							<div class="col-md-2">3
+							</div>
+							<div class="col-md-2">4
+							</div>
+							<div class="col-md-2">5
+							</div>
+							<div class="col-md-2">6
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--		<header>
+			
+
+			
+			
+			
+			<span id="auth"><auth-base-snippet></auth-base-snippet></span>
+			<search-snippet></search-snippet>
+			<nav>
+				<menu-snippet menu-code="main"></menu-snippet>
+			</nav>
+		</header>-->
+	</header>
+
+
+
+	<ng-view>
+
+	</ng-view>
+
+
+   	<div class="container-fluid"> 
+			типа футер
+	</div>
+	<script type="application/javascript" src="index.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+@icon-font-path: "./fonts/";
+@icon-font-name: "glyphicons-halflings-regular";
+@import '../../node_modules/bootstrap/less/bootstrap';
+body {
+  padding-top: 70px;
+  background: #FAEAF9;
+  .navbar-fixed-top {
+    z-index: 1041;
+    auth-snippet {
+      text-align: right;
+      & * {
+        text-align: left;
+      }
+    }
+    &.navbar-inverse {
+      background: #420B3F;
+      & .navbar-nav {
+        .active > a, .active > a:hover, .active > a:focus {
+          background-color: #5C0957;
+        }
+      }
+    }
+  }
+  @import 'profiles/style';
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    top: 35px;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<button type="button" class="btn btn-success navbar-btn" ng-click="openLoginPopup()" ng-if="!user.auth">
+  <span class="glyphicon glyphicon-log-in"></span>
+</button>
+<a href="#/profile" type="button" class="btn btn-success navbar-btn" ng-if="user.auth">
+  <span class="glyphicon glyphicon-user"></span>
+</a>
+<button type="button" class="btn btn-default navbar-btn" ng-click="logout()" ng-if="user.auth">
+  <span class="glyphicon glyphicon-log-out"></span>
+</button>
+
+
+
+<modal-snippet sn-id="auth-login-modal" sn-area-hidden="true" sn-aria-labelledby="myModalLabel" sn-close-btn="true" sn-title="Авторизация" sn-size="sm">
+  <div class="input-group" ng-class="errors.login.login?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control" placeholder="Username" ng-model="user._.login">
+  </div>
+  <br>
+  <div class="input-group" ng-class="errors.login.password?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    <input type="password" class="form-control" placeholder="Password" ng-model="user._.password">
+  </div>
+  <a ng-click="openRegisterPopup()">Регистрация</a> или
+  <a ng-click="openRecoveryPopup()">Восстановление</a>
+  <br>
+  <br>
+  <button type="button" class="btn btn-success col-md-5" ng-click="login()">Вход</button>
+  <button type="button" class="btn btn-default col-md-5 col-md-offset-2" ng-click="close()">Отмена</button>
+</modal-snippet>
+
+
+<modal-snippet sn-id="auth-register-modal" sn-area-hidden="true" sn-aria-labelledby="myModalLabel" sn-close-btn="true" sn-title="Регистрация" sn-size="sm">
+  <div class="input-group" ng-class="errors.register.login?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control" placeholder="Username" ng-model="user._.login">
+  </div>
+  <br>
+  <div class="input-group" ng-class="errors.register._password.value?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    <input type="password" class="form-control" placeholder="Password" ng-model="user._._password.value">
+  </div>
+  <br>
+  <div class="input-group" ng-class="errors.register._password.revalue?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    <input type="password" class="form-control" placeholder="Retype password" ng-model="user._._password.revalue">
+  </div>
+  <a ng-click="openLoginPopup()">Войти</a> или
+  <a ng-click="openRecoveryPopup()">Восстановить пароль</a>
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-success col-md-5" ng-click="register()">Регистрация</button>
+  <button type="button" class="btn btn-default col-md-5 col-md-offset-2" ng-click="close()">Отмена</button>
+</modal-snippet>
+
+
+<modal-snippet sn-id="auth-recovery-modal" sn-area-hidden="true" sn-aria-labelledby="myModalLabel" sn-close-btn="true" sn-title="Восстановить пароль" sn-size="sm">
+  <div class="input-group" ng-class="errors.register.login?'has-error':''">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control" placeholder="Username" ng-model="user._.login">
+  </div>
+  <a ng-click="openLoginPopup()">Войти</a> или
+  <a ng-click="openRegisterPopup()">Зарегистрироваться</a>
+  <br>
+  <br>
+  <button type="button" class="btn btn-success col-md-5" ng-click="recovery()">Восстановление</button>
+  <button type="button" class="btn btn-default col-md-5 col-md-offset-2" ng-click="close()">Отмена</button>
+</modal-snippet>
