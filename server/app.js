@@ -7,6 +7,7 @@ config.mode = 'dev';
 app = require('raving.core')(config);
 require('../modules.js')(app);
 
+
 //app.stop();
 //var log = app.get('logger')('main');
 

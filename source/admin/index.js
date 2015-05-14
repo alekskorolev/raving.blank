@@ -7,5 +7,6 @@ config.core.adm = true;
 raving = require('raving.core/admin')(config);
 require('bootstrap/dist/js/npm');
 require('../../custom_modules/bootstrap-snippets')(config);
+
 require('../../modules')(config);
 require('./templates');
